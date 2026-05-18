@@ -333,7 +333,8 @@
     }
     .booking-form h3 { font-family: 'Bebas Neue', sans-serif; font-size: 1.8rem; letter-spacing: 2px; color: var(--gold); margin-bottom: 26px; }
     .fgroup { margin-bottom: 18px; }
-    .fgroup label { display: block; font-size: 0.74rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--sky); margin-bottom: 7px; }
+    .booking-form .fgroup { display: flex; flex-direction: column; align-items: center; text-align: center; }
+
     .fgroup input, .fgroup select, .fgroup textarea {
       width: 100%; background: var(--abyss);
       border: 1.5px solid var(--deep); border-radius: 7px;
@@ -342,7 +343,70 @@
       outline: none; transition: border-color 0.2s;
       appearance: none;
     }
-    .fgroup input:focus, .fgroup select:focus, .fgroup textarea:focus { border-color: var(--sky); }
+
+
+    .avail-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 0.6rem;
+      font-size: 0.9rem;
+    }
+    .avail-table th,
+    .avail-table td {
+      padding: 0.45rem 0.75rem;
+      text-align: center;
+      border: 1px solid rgba(255,255,255,0.15);
+    }
+    .avail-table th:first-child,
+    .avail-table td:first-child {
+      text-align: left;
+    }
+    .avail-table thead th {
+      background: rgba(255,255,255,0.08);
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      color: var(--gold, #e8c840);
+    }
+    .avail-table tbody tr:nth-child(even) {
+      background: rgba(255,255,255,0.04);
+    }
+    .avail-yes {
+      color: #4caf50;
+      font-weight: 700;
+      font-size: 1rem;
+    }
+    .booking-btn {
+      display: inline-block;
+      background: #d4a827;
+      color: #1a2332 !important;
+      text-align: center;
+      font-family: 'Bebas Neue', 'Nunito', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 900;
+      letter-spacing: 0.12em;
+      padding: 0.75rem 2rem;
+      border-radius: 8px;
+      text-decoration: none;
+      margin-top: 1rem;
+      transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+      box-shadow: 0 4px 14px rgba(212, 168, 39, 0.35);
+    }
+    .booking-btn:hover {
+      background: #e8c840;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(212, 168, 39, 0.5);
+    }
+    .booking-btn:active {
+      transform: translateY(0);
+    }
+    .booking-label {
+      font-size: 0.9rem;
+      opacity: 0.75;
+      margin-bottom: 0.25rem;
+    }
+
+    .fgroup input:focus, .fgroup select:focus, .fgroup textarea:focus {
+       border-color: var(--sky); }
     .fgroup select option { background: var(--abyss); }
     .fgroup textarea { height: 90px; resize: none; }
     .submit-btn {
